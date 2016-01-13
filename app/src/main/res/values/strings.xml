@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Shopping Cart</string>
+    <string name="action_settings">Settings</string>
+    <string name="activity_produce">Produce Selection</string>
+    <string name="activity_basket">Basket Total</string>
+    <string name="select_currency">Select the currency you prefer for the total amount displayed below</string>
+</resources>

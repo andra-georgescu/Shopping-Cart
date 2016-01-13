@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/card_view_height"
+    android:layout_margin="@dimen/spacing"
+    card_view:cardBackgroundColor="@color/white"
+    card_view:cardCornerRadius="@dimen/default_corner_radius">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.android.volley.toolbox.NetworkImageView
+            android:id="@+id/produceNetworkImage"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/produce_image_height"
+            android:layout_alignParentTop="true"
+            android:layout_margin="@dimen/activity_margin" />
+
+        <TextView
+            android:id="@+id/produceName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/produceNetworkImage"
+            android:layout_marginLeft="@dimen/activity_vertical_margin"
+            android:layout_marginRight="@dimen/activity_vertical_margin"
+            android:ellipsize="end"
+            android:lines="2"
+            android:maxLines="2"
+            android:text="Semi Skimmed Milk 1L Bottle" />
+
+        <TextView
+            android:id="@+id/producePrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/produceName"
+            android:layout_marginBottom="@dimen/spacing"
+            android:layout_marginLeft="@dimen/activity_vertical_margin"
+            android:textColor="@color/colorAccent"
+            android:text="£1.10" />
+
+        <TextView
+            android:id="@+id/pricePerUnit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/produceName"
+            android:layout_marginBottom="@dimen/spacing"
+            android:layout_marginLeft="@dimen/activity_vertical_margin"
+            android:layout_marginRight="@dimen/activity_vertical_margin"
+            android:layout_toRightOf="@id/producePrice"
+            android:gravity="right"
+            android:text="(£1.10/l)" />
+
+        <ImageView
+            android:id="@+id/separator"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/delimiter_width"
+            android:layout_below="@id/producePrice"
+            android:background="@android:color/darker_gray" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/separator">
+
+            <TextView
+                android:id="@+id/addToBasket"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="ADD TO BASKET"
+                android:textSize="16sp"
+                android:textColor="@color/colorAccent"/>
+
+            <LinearLayout
+                android:id="@+id/addedToBasket"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/minus"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:padding="@dimen/spacing"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/activity_vertical_margin"
+                    android:src="@drawable/minus" />
+
+                <TextView
+                    android:id="@+id/quantity"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="x1"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/plus"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:padding="@dimen/spacing"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="@dimen/activity_vertical_margin"
+                    android:src="@drawable/plus" />
+
+            </LinearLayout>
+        </FrameLayout>
+    </RelativeLayout>
+</android.support.v7.widget.CardView>
